@@ -33,7 +33,7 @@ function createIssue() {
   let issueTitle = document.querySelector('#title').value
   let issueBody = document.querySelector('#body').value
   fetch('https://api.github.com/repos/HugoSanchez/javascript-fetch-lab/issues', {
-    method: 'POST',
+    method: 'post',
     body: JSON.stringify({
       'title': issueTitle,
       'body': issueBody
@@ -56,7 +56,7 @@ function showResults(url) {
 function forkRepo() {
   const repo = 'learn-co-curriculum/javascript-fetch-lab'
   fetch('https://api.github.com/repos/learn-co-curriculum/javascript-fetch-lab/forks', {
-    method: 'POST',
+    method: 'post',
     headers: {
       Authorization: getToken()
     }
